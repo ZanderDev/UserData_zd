@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ddefine</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#define &lt;#define#&gt;   ((D_Family==UIDeviceFamilyiPad)?&lt;#iPad#&gt;:\
+(((D_Family==UIDeviceFamilyiPhone)?((D_Platform==UIDevice5iPhone)?&lt;#iPhone5#&gt;:&lt;#iPhone4#&gt;):&lt;#unknow#&gt;)))</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DFFF782D-6A28-4958-99F8-3D5F6918EDC7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ddefine</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ddefine</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

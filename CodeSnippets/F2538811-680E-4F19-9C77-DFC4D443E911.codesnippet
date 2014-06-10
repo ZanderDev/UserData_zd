@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addTableViewController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self createMainView];
+    
+    if (!self._titleName) {
+        self._titleName = [self.channelItem objectForKey:s_channelname];
+    }
+    
+    [self createTitleView:self._titleName];
+    [self._titleView left:nil btnImg:s_Title_Btn_Back];
+    //    [self._titleView right:nil btnImg:s_Title_Btn_Query];
+    
+}
+
+#pragma mark - -------- 响应 ----------
+
+-(void) titleBtnClick:(id)button
+{
+    int tag = [button tag];
+    if (tag == i_Title_Btn_Left) {
+        [self._superPage popController];
+    }
+}
+
+
+#pragma mark - -------- 请求 ----------
+-(void) refreshPage
+{
+    if (self._tableView._dataList.count&gt;0 || self._tableView._currPage != -1) {
+        [self getTableData:self._tableView isRefresh:YES];
+    }
+}
+
+#pragma mark - -------- 页面 ----------
+
+-(void) createMainView
+{
+    float th = self.tabController!=nil?f_Page_h-f_TabBar_h:f_Page_h;
+    CGRect frame = CGRectMake(0, f_Page_y, f_Device_w, th);
+    self._tableView = [TTableView tableWithFrame:frame dataSource:self isRefresh:YES];
+    self._tableView.singleSection = YES;
+    self._tableView.noRecordText = @"暂无列表记录";
+    [self addSubview:self._tableView];
+    [self._tableView refreshTable];
+    
+}
+
+#pragma mark - -------- TTableDelegate ----------
+
+-(float) getCellHeight:(NSIndexPath *)indexPath
+{
+    return 100/2.f;
+}
+
+-(BaseTableCell*) cellAtIndexPath:(NSIndexPath *)indexPath
+{
+    BaseTableCell* tCell = [self._tableView cellWithIdentifier:&lt;#Identifier#&gt; indexPath:indexPath];
+//    [self._tableView addCellBtn:indexPath tag:1 btn:tCell._mBtn1];
+    return tCell;
+}
+
+-(void) getTableData:(TTableView*)table isRefresh:(BOOL)isRefresh
+{
+    // --- 测试数据
+    for (int i=0; i&lt;20; i++) {
+        [self._tableView._dataList addObject:@[@[@"内容1",@"内容1"],@[@"内容2",@"内容2"]]];
+    }
+    [self._tableView refreshTable];
+    
+    // --- 请求数据
+}
+
+-(void) getMoreTableData:(TTableView *)table
+{
+    // --- 请求数据
+    
+}
+
+// --- select cell
+-(void) cellSelected:(NSIndexPath*)indexPath
+{
+    DLog("---&gt; row &lt;%d&gt;",indexPath.row);
+    
+}
+
+-(void) cellBtnClick:(UIButton*)button
+{
+    int tag = Get_Cell_Btn_Tag(button.tag);
+    NSIndexPath* indexPath = Get_Cell_Btn_Path(button.tag);
+    DLog("---&gt; indexPath &lt;%#&gt;  --&gt; tag &lt;%d&gt;",indexPath,tag);
+    
+}
+
+
+ 
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F2538811-680E-4F19-9C77-DFC4D443E911</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>addTableViewController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchScopes
+   version = "1.1">
+   <Scope
+      name = "Project And frameWork"
+      predicate = "location_workspace_and_frameworks == &quot;&quot;"
+      uuid = "B54A3C7D-6DA2-406D-BC53-1581F39CB87E">
+   </Scope>
+   <Scope
+      name = "in workspace"
+      predicate = "location_workspace == &quot;&quot;"
+      uuid = "7DBAC821-6C5C-476D-BB6E-EB528001753C">
+   </Scope>
+   <Scope
+      name = "all"
+      predicate = "location_workspace_and_frameworks == &quot;&quot;"
+      uuid = "EE82D0D7-0730-4E73-86FA-C0902EDBCB07">
+   </Scope>
+</SearchScopes>

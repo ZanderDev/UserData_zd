@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void) testMethod
+{
+    /********
+     //--------------------------- 筛选
+     
+     // 礼品兑换
+     // 0:全部  1:能操作(未完成 礼品没有发货,电子券(兑换码)没有消费的) 2:已完成 3:取消
+     
+     
+     // 预约记录
+     // 
+     
+     // 服务调度
+     
+     // 维保服务
+     
+     // 年审服务
+     
+     // 续保服务
+
+     
+     ********/
+//    [self exportXcassetsImage];
+    int x = 10;
+    NSArray* wei =@[@"1",
+                    @"2"
+                    ];
+//    NSArray* da = @[@"",
+//                    @"",
+//                    @"",
+//                    @"",
+//                    @"",
+//                    @"",
+//                    @"",
+//                    @""];
+    
+    
+    NSInteger n = 100;
+    int value = 0;
+    NSString* name = @"";
+    int l = 0;
+    int h = 0;
+    for (int i = 0; i&lt;n; i++) {
+        value = arc4random() % x;
+        DLog("随机数：%d",value);
+        
+        if ([wei containsObject:k_Str_Fmt("%d",value)]) {
+            name = @"伟健";
+            //        DLog("中奖人：伟健");
+            h +=1;
+        }else{
+            name = @"雷总";
+            //        DLog("中奖人：雷总");
+            l +=1;
+        }
+        DLog("中奖人：%@",name);
+    }
+
+    int num = 0;
+    if (l&gt;h) {
+        name = @"雷总";
+        num = l ;
+    }else{
+        name = @"伟健";
+        num = h ;
+    }
+//    [self showAlert:k_Str_Fmt("中奖人%@-%d！！",name,l) done:@"确定" cancel:nil after:0 click:^(int index) {}];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>02AA1BE6-7BB9-49E0-A9DC-0C643B089782</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>随机选择方法-mdl</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

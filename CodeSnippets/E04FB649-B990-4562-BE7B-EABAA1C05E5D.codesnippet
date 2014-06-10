@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>add viewController （table）</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self createView];
+    [self createTitleView:@"兑换管理"];
+    [self._titleView left:nil btnImg:s_Title_Btn_Menu1];
+    [self._titleView right: nil
+                    btnImg:s_Title_Btn_Lx_More];
+}
+
+#pragma mark - -------- 页面 ----------
+
+-(void) createView
+{
+    CGRect frame = CGRectMake(0, f_Page_y, f_Device_w, f_Page_h-f_TabBar_h);
+    BaseTableView* tTable = [BaseTableView tableWithFrame:frame dataSource:self];
+    tTable._recordTitle = @"无记录";
+    self._tableView = tTable;
+    //    [self._tableView headerHide:YES];
+    //    [self._tableView bottomHide:YES];
+    [self addSubview:tTable];
+    [self._tableView refreshTable];
+    
+    //    [self createQueryView];
+}
+
+#pragma mark - -------- TTableDataSource ----------
+
+-(float) getCellHeight:(NSIndexPath *)indexPath
+{
+    return 162/2.f;
+}
+
+-(void) layoutCell:(BaseTableCell *)cell indexPath:(NSIndexPath *)indexPath
+{
+    [cell layoutCellWithTypeSEL:Cell_WaitReplay item:[self._tableView._dataList objectAtIndex:indexPath.row]];
+    [self._tableView addCellBtn:indexPath tag:1 btn:cell._mBtn1];   // 编辑
+    
+}
+// --- request data
+-(void) getTableData:(BaseTableView*)table isRefresh:(BOOL)isRefresh
+{
+    
+    NSInteger n = 10;
+    NSMutableArray* items = [NSMutableArray array];
+    for (int i = 0; i&lt;n; i++) {
+        NSDictionary* dic = @{@"Title": @"问题的描述问题的描述问题的描述问题的描述问题的描述", @"Plate": @"粤AXA008", @"Date": @"2013-03-15 03:25"};
+        [items addObject:dic];
+    }
+    [self._tableView doReloadListData:items];
+    
+    // ----- 服务管理列表
+    //    __block QAHistoryPage* bSelf = self;
+    //    [self doReqTest:YES resp: ^(BaseModel* item) {
+    //        if (item._isSuccess) {
+    //            bSelf._tableView._currPage = item.pageno;
+    //            [bSelf._tableView doReloadListData:item.rspDic];
+    //        }else{
+    //            [bSelf._tableView doReloadListData:nil];
+    //            [LoadingView showAlert:s_Alert_Req_Failed];
+    //        }
+    //    }];
+}
+
+-(void) getMoreTableData:(BaseTableView*)table
+{
+    // -----服务列表 获取更多
+//    __block QAHistoryPage* bSelf = self;
+//    NSInteger pageNo = self._tableView._currPage+1;
+//    [self doReqTest:pageNo resp: ^(BaseModel* item) {
+//        if (item._isSuccess) {
+//            bSelf._tableView._currPage = item.pageno;
+//            [bSelf._tableView doAddListData:item.rspDic];
+//        }else{
+//            //请求失败
+//            [bSelf._tableView doAddListData:nil];
+//            [LoadingView showAlert:s_Alert_More_Failed];
+//        }
+//    }];
+}
+
+// --- select cell
+-(void) cellSelected:(NSIndexPath*)cellPath
+{
+    DLog("---&gt; row &lt;%d&gt;",cellPath.row);
+
+}
+
+-(void) cellBtnClick:(UIButton*)button
+{
+    NSInteger row = Get_Cell_Btn_Row(button.tag);
+    NSInteger tag = Get_Cell_Btn_Tag(button.tag);
+    
+    DLog("---&gt; row &lt;%d&gt;  --&gt; tag &lt;%d&gt;",row,tag);
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E04FB649-B990-4562-BE7B-EABAA1C05E5D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>add viewController （table）</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add viewController （table）</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

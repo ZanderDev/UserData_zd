@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addTabViewController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self createMainView];
+}
+
+#pragma mark - -------- TabBarDataSource ----------
+
+-(NSArray*) itemsForBottomBar
+{
+    return [NSArray arrayWithObjects:
+            [NSArray arrayWithObjects:@"tabbar_bg_xb_l.png",@"tabbar_bg_xb_l_h.png", nil],
+            //            [NSArray arrayWithObjects:@"tabbar_bg_fw_c.png",@"tabbar_bg_fw_c_h.png", nil],
+            [NSArray arrayWithObjects:@"tabbar_bg_fw_r.png",@"tabbar_bg_fw_r_h.png", nil],
+            nil];
+}
+
+-(void) didSelectBarBtn:(NSInteger)index
+{
+    
+}
+
+-(void) flashBadge
+{
+    //    int lastCid = 0;
+    //    if (lastCid == 1 || lastCid == 2) {
+    //        [self.tabController flashBadgeAtIndex:lastCid isShow:YES];
+    //    }
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self flashBadge];
+}
+
+#pragma mark - -------- 页面 ----------
+
+-(void) createMainView
+{
+    UINavigationController* tNav = nil;
+    BasePage* tPage = nil;
+    
+    NSMutableArray* tControllers = [NSMutableArray arrayWithCapacity:0];
+    
+    tPage = [[&lt;#Page Class1#&gt; alloc] init];
+    tPage._superPage = self;
+    tNav = [tPage navWithController];
+    [tControllers addObject:tNav];
+    
+    tPage = [[&lt;#Page Class1#&gt;  alloc] init];
+    tPage._superPage = self;
+    tNav = [tPage navWithController];
+    [tControllers addObject:tNav];
+    
+    //    tPage = [[YearCheckPage alloc] init];
+    //    tPage._superPage = self;
+    //    tNav = [tPage navWithController];
+    //    [tControllers addObject:tNav];
+    
+    TabBarController* tTabPage = [TabBarController tabBarWithDataSource:self];
+    [tTabPage setViewControllers:tControllers];
+    [tTabPage set_delegate:self];
+    [self addSubview:tTabPage.view];
+    self._mtabController = tTabPage;
+    
+}
+
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A86874CA-FDBE-4EE3-B901-4D756F08E91C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>addTabViewController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
