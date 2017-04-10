@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addEmptPage</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self initData];
+    [self createMainView];
+    [self createTitleView:@"办事结果查询"];
+    [self._titleView left:nil btnImg:s_Title_Btn_Back];
+//    [self._titleView right:nil btnImg:s_Title_Btn_Back];
+}
+-(void)initData{
+    
+}
+-(void)createMainView{
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>11E3B830-C24B-4C29-92F2-A4258653003A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>addEmptPage</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

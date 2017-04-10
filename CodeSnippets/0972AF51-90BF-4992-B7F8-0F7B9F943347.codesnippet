@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>getTableData</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>__block &lt;#self Class#&gt;* bSelf = self;
+BaseParam* param = [&lt;#param Class#&gt;Param &lt;#param method#&gt;];
+[param setPageno:1 refresh:isRefresh];
+[self doRequest:param resp:^(&lt;#param Class#&gt;Model* item) {
+    if (item.isSuccess) {
+        bSelf._tableView._currPage = item.pageno;
+        [bSelf._tableView doReloadListData:item.&lt;#parameter#&gt;];
+    }else{
+        [item respFaild];
+    }
+}];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0972AF51-90BF-4992-B7F8-0F7B9F943347</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>temp getTableData</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

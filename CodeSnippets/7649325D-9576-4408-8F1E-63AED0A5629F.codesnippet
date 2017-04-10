@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>TempPageTypeSWitch</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>  NSInteger type = self._pageType;
+    switch (type) {
+        case &lt;#para#&gt;:{
+            break;
+        }
+        case &lt;#para#&gt;:{
+            break;
+        }
+        case &lt;#para#&gt;:{
+            break;
+        }
+        default:{
+            break;
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7649325D-9576-4408-8F1E-63AED0A5629F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TempPageTypeSWitch</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

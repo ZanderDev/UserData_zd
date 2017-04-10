@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addviewcontroller</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self createView];
+    [self createTitleView:@"&lt;#string#&gt;"];
+    [self._titleView leftTitle:&lt;#(NSString *)#&gt;];
+    [self._titleView rightTitle:&lt;#(NSString *)#&gt;];
+} 
+
+#pragma mark - -------- 响应 ----------
+-(void)titleBtnClick:(id)button{
+    [super titleBtnClick:button];
+    
+    NSInteger tag = [button tag];
+    switch (tag) {
+        case i_Title_Btn_Right:{
+            
+            break;
+        }
+        default:{
+            break;
+        }
+            
+    }
+}
+
+#pragma mark - -------- 页面 ----------
+-(void)createView{
+    
+}
+#pragma mark - -------- 请求 ----------
+
+#pragma mark - -------- 返回 ----------
+
+#pragma mark - -------- 内存 ----------
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2E7B5E35-CEA2-4032-B644-4816CFFCC074</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add view controller</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

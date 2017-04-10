@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>titleBtn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void)titleBtnClick:(id)button{
+    [super titleBtnClick:button];
+    
+    NSInteger tag = [button tag];
+    switch (tag) {
+        case i_Title_Btn_Right:{
+            &lt;#do your things#&gt;
+            break;
+        }
+        default:{
+            break;
+        }
+            
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A6B64DEE-791B-4B2B-8E18-64F41C668565</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>-titleBtn</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>-titleBtnClick（create titleBtnClick method）</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

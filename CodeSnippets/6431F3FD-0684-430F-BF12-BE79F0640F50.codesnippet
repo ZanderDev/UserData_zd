@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>getMoreTableData</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>__block &lt;#self Class#&gt;* bSelf = self;
+BaseParam* param = [&lt;#param Class#&gt;Param &lt;#param method#&gt;];
+[param setPageno:table._currPage+1 refresh:NO];
+[self doRequest:param resp:^(&lt;#param Class#&gt;Model* item) {
+    if (item.isSuccess) {
+        [bSelf._tableView doAddListData:item.&lt;#parameter#&gt;];
+    }else{
+        [item respFaild];
+    }
+}];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6431F3FD-0684-430F-BF12-BE79F0640F50</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>temp getMoreTableData</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

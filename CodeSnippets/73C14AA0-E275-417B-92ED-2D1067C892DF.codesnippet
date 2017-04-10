@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addDoReqFaild</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+-(BOOL)doReqFaild{
+    
+    if ([super doReqFaild]) {
+        return YES;
+    }
+    NSString* msg = &lt;# msg #&gt;;
+    
+    //    在model中做特殊处理
+    //        if (code == &lt;#condition#&gt;) {
+    //            msg = @"&lt;#special msg #&gt;";
+    //        }
+    
+    [self showAlert:msg done:@"确定" cancel:nil  click:^(int index) {}];
+    return YES;
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>73C14AA0-E275-417B-92ED-2D1067C892DF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>addDoReqFaild</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
